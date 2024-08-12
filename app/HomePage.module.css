@@ -1,0 +1,63 @@
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: linear-gradient(to right, #fbc2eb, #81a1ec);
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #141313;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    background-color: #0070f3;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: pulse 1s infinite; /* Pulsing effect by default */
+  }
+  
+  /* Hover state */
+  .button:hover {
+    background-color: #005bb5;
+    transform: scale(1.1); /* Slightly scale up */
+    animation: none; /* Stop the pulsing animation on hover */
+  }
+  
+  /* Focus state */
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 118, 255, 0.4);
+  }
+  
+  /* Keyframes for pulsing effect */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

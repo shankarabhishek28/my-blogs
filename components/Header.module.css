@@ -1,0 +1,56 @@
+/* src/components/Header.module.css */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3d90f7 0%, #1a6edc 100%);
+    color: white;
+    padding: 18px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* font-family: 'Arial', sans-serif; */
+    font-size: 1.2rem;
+    border-bottom: 2px solid #1a6edc;
+    transition: background 0.3s ease;
+}
+
+.header:hover {
+    background: linear-gradient(135deg, #1a6edc 0%, #3d90f7 100%);
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+.text {
+    display: inline-block;
+    /* font-family: 'sans-serif', sans-serif; */
+    font-size: 3.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* cursor-like effect */
+    animation: typing 1.5s steps(20, end) forwards, blink-caret 1.5s steps(20, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 26%; /* Adjust to fit the text width */
+    }
+}
+
+@keyframes blink-caret {
+    from, 50% {
+        border-color: white;
+    }
+    to {
+        border-color: transparent;
+    }
+}

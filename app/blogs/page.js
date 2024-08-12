@@ -5,8 +5,7 @@
 import { useState, useEffect } from 'react';
 import BlogListing from '../../components/BlogListing';
 import Pagination from '../../components/Pagination';
-import axios from 'axios';
-
+import {ClimbingBoxLoader} from 'react-spinners'
 export default function HomePage() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,9 +15,18 @@ export default function HomePage() {
   useEffect(() => {
     const fetchBlogs = async () => {
       setLoading(true);
-      const res = await axios.get('https://api.slingacademy.com/v1/sample-data/blog-posts?offset=0&limit=30');
-      setBlogs(res.data.blogs);
-      setLoading(false);
+      try {
+        const response = await fetch('https://api.slingacademy.com/v1/sample-data/blog-posts?offset=0&limit=30');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setBlogs(data.blogs);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchBlogs();
   }, []);
@@ -30,7 +38,7 @@ export default function HomePage() {
   };
 
   const displayedBlogs = blogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage);
-  if(loading) return <div style={{display:'flex', alignItems:'center',justifyContent:'center', height:'100vh'}}>Loading...</div>
+  if(blogs.length < 1) return <div style={{display:'flex', alignItems:'center',justifyContent:'center', height:'100vh'}}><ClimbingBoxLoader color='#3d90f7' size={24}/></div>
 
   return (
     <div style={{paddingBottom:'40px'}}>

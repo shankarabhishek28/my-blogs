@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { HashLoader, PacmanLoader } from 'react-spinners';
 
 const BlogDetail = () => {
   const router = useRouter();
@@ -13,7 +14,8 @@ const BlogDetail = () => {
         .then((data) => setBlog(data));
     }
   }, [id]);
-  if(!blogs) return <div style={{display:'flex', alignItems:'center',justifyContent:'center', height:'100vh'}}>Loading...</div>
+  if(!blogs) return <div style={{display:'flex', alignItems:'center',justifyContent:'center', height:'100vh'}}><HashLoader color='#3d90f7' size={64} />
+</div>
   const {blog} = blogs;
 
   console.log(blog)

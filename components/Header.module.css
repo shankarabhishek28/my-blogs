@@ -28,7 +28,7 @@
 
 .text {
     display: inline-block;
-    /* font-family: 'sans-serif', sans-serif; */
+    font-family: 'sans-serif','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 3.5rem;
     font-weight: bold;
     white-space: nowrap;

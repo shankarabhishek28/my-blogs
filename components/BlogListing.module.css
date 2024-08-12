@@ -46,7 +46,8 @@
   font-size: 1.5rem;
   margin: 0 0 10px 0;
   text-decoration: none !important; /* Removes underline forcefully */
-  
+  font-family: 'sans-serif','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
   color: #5641ae;
 }
 .card a {
@@ -55,6 +56,8 @@
 .card p {
   font-size: 1rem;
   color: #084a88;
+  font-family: 'sans-serif','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
   line-height: 1.5;
 }
 

@@ -10,7 +10,7 @@ export default function HomePage() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading,setLoading] = useState(false);
-  const blogsPerPage = 3;
+  const blogsPerPage = 6;
 
   useEffect(() => {
     const fetchBlogs = async () => {

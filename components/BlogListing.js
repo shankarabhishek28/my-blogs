@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './BlogListing.module.css';
 
 const BlogListing = ({ blogs }) => {
+
   return (
     <div className={styles.grid}>
       {blogs.map((blog) => (

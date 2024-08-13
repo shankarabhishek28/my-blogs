@@ -34,14 +34,14 @@
     font-size: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
-    animation: pulse 1s infinite; /* Pulsing effect by default */
+    animation: pulse 1s infinite; 
   }
   
   /* Hover state */
   .button:hover {
     background-color: #005bb5;
-    transform: scale(1.1); /* Slightly scale up */
-    animation: none; /* Stop the pulsing animation on hover */
+    transform: scale(1.1); 
+    animation: none; 
   }
   
   /* Focus state */
@@ -50,7 +50,7 @@
     box-shadow: 0 0 0 2px rgba(0, 118, 255, 0.4);
   }
   
-  /* Keyframes for pulsing effect */
+  
   @keyframes pulse {
     0% {
       transform: scale(1);

@@ -9,12 +9,10 @@ import {ClimbingBoxLoader} from 'react-spinners'
 export default function HomePage() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading,setLoading] = useState(false);
   const blogsPerPage = 6;
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      setLoading(true);
       try {
         const response = await fetch('https://api.slingacademy.com/v1/sample-data/blog-posts?offset=0&limit=30');
         if (!response.ok) {
@@ -25,7 +23,6 @@ export default function HomePage() {
       } catch (error) {
         console.error('Error fetching blogs:', error);
       } finally {
-        setLoading(false);
       }
     };
     fetchBlogs();

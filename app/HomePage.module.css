@@ -49,7 +49,11 @@
     outline: none;
     box-shadow: 0 0 0 2px rgba(0, 118, 255, 0.4);
   }
-  
+  .submittedBy{
+    position: absolute;
+    right: 1;
+    bottom: 0;
+  }
   
   @keyframes pulse {
     0% {

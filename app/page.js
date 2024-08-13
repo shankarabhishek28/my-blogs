@@ -11,6 +11,7 @@ const HomePage = () => {
           Go to Blogs
         </button>
       </Link>
+      <h6 className={styles.submittedBy}>Submitted By - Abhishek Shankar</h6>
     </div>
   );
 };
